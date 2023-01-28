@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="./static/generator.js"></script>
+        <link rel="stylesheet" href="./static/index.css">
+        <meta charset="utf-8">
+        <title>NNBuilder</title>
+    </head>
+    <header>
+        <h1>NNBuilder</h1>
+        <h2>NNBuilder is a visual programming application for building neural networks</h2>
+    </header>
+    <body>
+        <div class="clearfix">
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Input Layer</p>
+                <label class="layer-input" for="Input_Dem">Dimension:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="InputDem" name="Input_Dem">
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Hidden Layer 1</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" data-boxtype="layer" id="layer1" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" data-boxtype="act" id="act1" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden1Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden1Nodes" name="hidden1">
+                
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Hidden Layer 2</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" data-boxtype="layer" id="layer2" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" data-boxtype="act" id="act2" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden2Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden2Nodes" name="hidden2">
+                
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Hidden Layer 3</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" data-boxtype="layer" id="layer3" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" data-boxtype="act" id="act3" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden3Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden3Nodes" name="hidden3">
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Hidden Layer 4</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" data-boxtype="layer" id="layer4" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" data-boxtype="act" id="act4" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden4Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden4Nodes" name="hidden4">
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Hidden Layer 5</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" data-boxtype="layer" id="layer5" layertype="none" name="la" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" data-boxtype="act" id="act5" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden5Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden5Nodes" name="hidden5">
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Hidden Layer 6</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" data-boxtype="layer" id="layer6" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" data-boxtype="act" id="act6" layertype="none" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden6Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden6Nodes" name="hidden6">
+            </div>
+
+            <div class="layer" style="background-color:grey">
+                <p class="net-layer-label">Output Layer</p>
+                <p class="net-layer-label">Loss Function:</p>
+                <input type="radio" class="loss-button" id="mse" name="loss-func" value="mse">
+                <label for="mse" class="loss-button-label">Mean &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br>Squared Error<br><br></label>
+                <input type="radio" class="loss-button" id="biCrossEntropy" name="loss-func" value="biCE">
+                <label for="mse" class="loss-button-label">Binary &emsp;&emsp;&emsp;&emsp;<br>Cross-Entropy<br><br></label>
+                <input type="radio" class="loss-button" id="catCrossEntropy" name="loss-func" value="catCE">
+                <label for="mse" class="loss-button-label">Catogorical<br>Cross-Entropy</label>
+                
+            </div>
+
+            <div class="bank" style="background-color:grey">
+                <p class="net-layer-label">Layer Type</p>
+                <div class="bank-item" data-appendto="layer" id="fully-conected" value="fullyConected" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label">Fully Connected</p>
+                </div>
+
+                <div class="bank-item" data-appendto="layer" id="convolution" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label">Convolution</p>
+                </div>
+
+                <div class="bank-item" data-appendto="layer" style="background-color:darkred" id="deconvolution" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label">Deconvolution</p>
+                </div>
+
+                <div class="bank-item" data-appendto="layer" style="background-color:darkred" id="recurrent" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label">Recurrent</p>
+                </div>
+            </div>
+
+            <div class="bank" style="background-color:grey">
+                <p class="net-layer-label">Activation Functions</p>
+                <div class="bank-item" data-appendto="act" style="background-color:#781cba" id="sigmoid" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">Sigmoid</p>
+                </div>
+                <div class="bank-item" data-appendto="act" style="background-color:#781cba" id="tanh" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">Tanh</p>
+                </div>
+
+                <div class="bank-item" data-appendto="act" style="background-color:#781cba" id="ReLU" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">ReLU</p>
+                </div>
+
+                <div class="bank-item" data-appendto="act" style="background-color:#781cba" id="softmax" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">Softmax</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="generate-button" type="button" onclick="generate();">Generate Network</button>
+                <p id="test"></p>
+
+            </div>
+            <div class="button-container">
+                <button class="refresh-button" type="button" onclick="location.reload();return false;">Clear Fields</button>
+            </div>
+        </div>
+    </body>
+</html>

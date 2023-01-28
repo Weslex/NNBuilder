@@ -1,0 +1,132 @@
+*{
+    font-family :'Lucida Console', monospace;
+    padding-left : 15pt;
+    padding-right : 15pt;
+    background-color : darkgrey; 
+}
+
+.layer {
+    padding-right : 0px;
+    padding-left : 0px;
+    float : left;
+    width : 155px;
+    height : 400px;
+    margin : .5%;
+    border-radius: 20px;
+    text-align: center;
+
+    
+
+}
+
+
+.layer-input {
+    padding-left: 10px;
+    width: 25%;
+    background-color: grey;
+
+}
+
+.bank {
+    background-color : grey; 
+    padding-right : 0px;
+    padding-left : 0px;
+    float : left; 
+    width : 48%;
+    margin : .5%; 
+    height : 150px; 
+    border-radius: 20px; 
+}
+
+.net-layer-label {
+    text-align : center; 
+    background-color : grey; 
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table; 
+}
+
+.bank-item {
+    padding-right: 0px;
+    padding-left: 0px; 
+    float : left;
+    width: 148px;
+    margin: 2pt;
+    height: 60px; 
+    border-radius: 10px;
+    text-align: center; 
+    justify-content: center;
+    display: flex; 
+    border: 1px solid black;
+}
+.bank-item-label {
+    font-size : 13px; 
+    background-color : darkred; 
+    vertical-align: middle; 
+    text-align: center;
+}
+
+.bank-item-label-activation {
+    font-size : 13px; 
+    background-color : #781cba; 
+    vertical-align: middle; 
+    text-align: center;
+}
+
+.button-container {
+    text-align: center; 
+}
+.generate-button {
+    font-size: 24px; 
+    border-radius: 20px;  
+}
+
+.refresh-button {
+    font-size: 15px;
+    border-radius: 15px; 
+}
+
+.layer-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 153px;
+    height: 63px;
+    border-radius: 15px;
+    background-color: rgb(169, 84, 84);  
+    border: 1px solid black; 
+}
+
+
+.activation-container {
+    padding: 0;
+    margin-bottom: 5px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 153px;
+    height: 63px;
+    border-radius: 15px; 
+    background-color: #71797E; 
+    border: 1px solid black;    
+}
+.loss-buttons{
+    display: flex;
+    align-items: baseline;
+}
+.loss-button {
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    margin-left: 0px;
+}
+
+.loss-button-label {
+    padding: 0; 
+    background-color: grey;
+
+}
