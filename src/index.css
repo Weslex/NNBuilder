@@ -1,0 +1,68 @@
+*{
+    font-family :'Lucida Console', monospace;
+    padding-left : 15pt;
+    padding-right : 15pt;
+    background-color : darkgrey; 
+}
+
+.layer {
+    padding-right : 0px;
+    padding-left : 0px;
+    float : left;
+    width : 11.5%;
+    height : 400px;
+    margin : .5%;
+    border-radius: 20px;
+    text-align: center;
+    
+
+}
+
+.layer-input {
+    padding-left: 10px;
+    width: 25%;
+    background-color: grey;
+
+}
+
+.bank {
+    background-color : grey; 
+    padding-right : 0px;
+    padding-left : 0px;
+    float : left; 
+    width : 48%;
+    margin : .5%; 
+    height : 150px; 
+    border-radius: 20px; 
+}
+
+.net-layer-label {
+    text-align : center; 
+    background-color : grey; 
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table; 
+}
+
+.bank-item {
+    padding-right: 4px;
+    padding-left: 0px; 
+    float : left;
+    width: 22.35%;
+    margin: 1%;
+    height: 60px; 
+    border-radius: 10px;
+    text-align: center; 
+    justify-content: center;
+    display: flex;  
+}
+.bank-item-label {
+    font-size : 13px; 
+    background-color : darkred; 
+    vertical-align: middle; 
+    text-align: center;
+    display: flex;
+}
