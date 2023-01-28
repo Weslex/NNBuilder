@@ -20,74 +20,112 @@
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Hidden Layer 1</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden1Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden1Nodes" name="Input_Dem">
                 
             </div>
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Hidden Layer 2</p>
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden2Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden2Nodes" name="Input_Dem">
                 
             </div>
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Hidden Layer 3</p>
-                
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden3Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden3Nodes" name="Input_Dem">
             </div>
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Hidden Layer 4</p>
-                
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden4Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden4Nodes" name="Input_Dem">
             </div>
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Hidden Layer 5</p>
-                
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden5Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden5Nodes" name="Input_Dem">
             </div>
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Hidden Layer 6</p>
-                
+                <p class="net-layer-label">Layer Type:</p>
+                <div class="layer-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <p class="net-layer-label">Activation Function:</p>
+                <div class="activation-container" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                <label class="layer-input" for="hidden6Nodes">Nodes:</label>
+                <input class="layer-input" type="text" inputmode="numeric" id="hidden6Nodes" name="Input_Dem">
             </div>
 
             <div class="layer" style="background-color:grey">
                 <p class="net-layer-label">Output Layer</p>
+                <p class="net-layer-label">Loss Function:</p>
                 
             </div>
 
             <div class="bank" style="background-color:grey">
                 <p class="net-layer-label">Layer Type</p>
-                <div class="bank-item" style="background-color:darkred">
+                <div class="bank-item" id="fully-conected" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
                     <p class="bank-item-label">Fully Connected</p>
                 </div>
 
-                <div class="bank-item" style="background-color:darkred">
+                <div class="bank-item" id="convolution" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
                     <p class="bank-item-label">Convolution</p>
                 </div>
 
-                <div class="bank-item" style="background-color:darkred">
+                <div class="bank-item" style="background-color:darkred" id="deconvolution" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
                     <p class="bank-item-label">Deconvolution</p>
                 </div>
 
-                <div class="bank-item" style="background-color:darkred">
+                <div class="bank-item" style="background-color:darkred" id="recurrent" style="background-color:darkred" draggable="true" ondragstart="drag(event);">
                     <p class="bank-item-label">Recurrent</p>
                 </div>
             </div>
 
             <div class="bank" style="background-color:grey">
                 <p class="net-layer-label">Activation Functions</p>
-                <div class="bank-item" style="background-color:darkred">
-                    <p class="bank-item-label">Sigmoid</p>
+                <div class="bank-item" style="background-color:#d38a22" id="sigmoid" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">Sigmoid</p>
                 </div>
-                <div class="bank-item" style="background-color:darkred">
-                    <p class="bank-item-label">Tanh</p>
-                </div>
-
-                <div class="bank-item" style="background-color:darkred">
-                    <p class="bank-item-label">ReLU</p>
+                <div class="bank-item" style="background-color:#d38a22" id="tanh" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">Tanh</p>
                 </div>
 
-                <div class="bank-item" style="background-color:darkred">
-                    <p class="bank-item-label">Softmax</p>
+                <div class="bank-item" style="background-color:#d38a22" id="ReLU" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">ReLU</p>
                 </div>
+
+                <div class="bank-item" style="background-color:#d38a22" id="Softmax" draggable="true" ondragstart="drag(event);">
+                    <p class="bank-item-label-activation">Softmax</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="generate-button" type="button" onclick="generate();">Generate Network</button>
+                <p id="test"></p>
+
             </div>
         </div>
     </body>

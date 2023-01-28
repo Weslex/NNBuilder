@@ -9,14 +9,16 @@
     padding-right : 0px;
     padding-left : 0px;
     float : left;
-    width : 11.5%;
+    width : 155px;
     height : 400px;
     margin : .5%;
     border-radius: 20px;
     text-align: center;
+
     
 
 }
+
 
 .layer-input {
     padding-left: 10px;
@@ -48,11 +50,11 @@
 }
 
 .bank-item {
-    padding-right: 4px;
+    padding-right: 0px;
     padding-left: 0px; 
     float : left;
-    width: 22.35%;
-    margin: 1%;
+    width: 152px;
+    margin: 5pt;
     height: 60px; 
     border-radius: 10px;
     text-align: center; 
@@ -64,5 +66,43 @@
     background-color : darkred; 
     vertical-align: middle; 
     text-align: center;
+}
+
+.bank-item-label-activation {
+    font-size : 13px; 
+    background-color : #d38a22; 
+    vertical-align: middle; 
+    text-align: center;
+}
+
+.button-container {
+    text-align: center; 
+}
+.generate-button {
+    font-size: 24px; 
+    border-radius: 20px;  
+}
+
+.layer-container {
+    padding: 0;
     display: flex;
+    align-items: center;
+    text-align: center;
+    width: 153px;
+    height: 63px;
+    background-color: darkred; 
+    border: 1px solid black; 
+}
+
+
+.activation-container {
+    padding: 0;
+    margin-bottom: 5px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 153px;
+    height: 63px;
+    background-color: #d38a22; 
+    border: 1px solid black;    
 }
